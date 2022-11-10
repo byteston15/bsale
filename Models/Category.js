@@ -22,7 +22,7 @@ const Category =  sq.define("category", {
         }
     },
     
-}, {freezeTableName : false , timestamps : false})
+}, {freezeTableName : true , timestamps : false})
 
 
 Category.hasMany(Product, {

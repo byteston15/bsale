@@ -45,7 +45,7 @@ exports.getProductByCategory = async(req, res,next) => {
                     [Op.like] : `%${req.query.name}%`}
                 }
             }}
-        const p1 = await Product.findAll(whereObject, orderBy)
+        const p1 = await Product.findAll(whereObject)
         if(!p1){
             return res.status(404).json({
                 success : false, 
